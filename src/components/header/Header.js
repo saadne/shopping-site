@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../asserts/crown.svg";
 import "./Header.styles.scss";

@@ -5,25 +5,25 @@ import Homepage from "./pages/homepage/Homepage";
 import Shop from "./pages/shop-page/Shop";
 import Header from "./components/header/Header";
 import Auth from "./pages/auth/Auth";
-import { auth } from "firebase";
+import { auth } from "./firebase";
 
 class App extends React.Component {
   state = {
     currentUser: null,
   };
 
-  unsubscribeFormAuth = null;
+  unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFormAuth = auth().onAuthStateChanged((user) => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
       this.setState({ currentUser: user });
 
       console.log(user);
     });
   }
 
-  componentWillUnmount() {
-    this.unsubscribeFormAuth();
+  componentWillUnmout() {
+    this.unsubscribeFromAuth();
   }
 
   render() {
@@ -39,5 +39,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;

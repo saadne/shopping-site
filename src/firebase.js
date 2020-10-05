@@ -1,25 +1,25 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/auth'
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
 
 const config = {
-    apiKey: "AIzaSyCyPFn0ze5EtsmLt47JR4p6Cf2gVdDTueE",
-    authDomain: "shop-db-26f16.firebaseapp.com",
-    databaseURL: "https://shop-db-26f16.firebaseio.com",
-    projectId: "shop-db-26f16",
-    storageBucket: "shop-db-26f16.appspot.com",
-    messagingSenderId: "374887175184",
-    appId: "1:374887175184:web:a76fd6f9dec8a1d5aea695",
-    measurementId: "G-L1XBXW4BL7"
-  };
+  apiKey: "AIzaSyD_aw25LAkuMILPXjCx0iFJFHqP50yKyUo",
+  authDomain: "test-db-4bdb1.firebaseapp.com",
+  databaseURL: "https://test-db-4bdb1.firebaseio.com",
+  projectId: "test-db-4bdb1",
+  storageBucket: "test-db-4bdb1.appspot.com",
+  messagingSenderId: "558542931531",
+  appId: "1:558542931531:web:1dcb0148af2efb86c72fce",
+  measurementId: "G-K7972RKD02",
+};
 
-firebase.initializeApp(config)
+firebase.initializeApp(config);
 
-export const auth = firebase.auth()
-export const firestore = firebase.firestore()
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider()
-provider.setCustomParameters({propmt:'select_account'})
-export const signInWithGoogle = () => auth.signInWithPopup(provider)
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ propmt: "select_account" });
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
