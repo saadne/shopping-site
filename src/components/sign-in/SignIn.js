@@ -13,11 +13,11 @@ export class SignIn extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
     this.setState({
       email: "",
       password: "",
     });
+    console.log(this.state)
   };
   handleChange = (event) => {
     const { value, name } = event.target;
@@ -25,11 +25,13 @@ export class SignIn extends Component {
     this.setState({
       [name]: value,
     });
+    
   };
+  
   render() {
     return (
       <div className="sign-in">
-        <h1>I already have an account</h1>
+        <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
         <form onSubmit={this.handleSubmit}>
           <FormInput

@@ -15,5 +15,5 @@ function Collections({ title, items }) {
     </div>
   );
 }
-
+  
 export default Collections;
